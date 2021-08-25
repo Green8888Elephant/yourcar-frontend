@@ -5,8 +5,8 @@ import {Car} from "../../components/car";
 import {ICar} from "../../../typings/car";
 
 
-import Carousel, { Dots, slidesToShowPlugin} from "@brainhubeu/react-carousel";
-import {CarouselProps} from "../../components/extlibraries/MyExtCarouselProps";
+import Carousel, {CarouselProps, Dots, slidesToShowPlugin} from "brainhubeu__react-carousel";
+// import {CarouselProps} from "../../components/extlibraries/MyExtCarouselProps";
 import "@brainhubeu/react-carousel/lib/style.css";
 import {useMediaQuery} from "react-responsive";
 import {SCREENS} from "../../components/responsive";
@@ -104,34 +104,35 @@ export function TopCars() {
                               },
                           },
                     ]}
-                    breakpoints={{
-                        640: {
-                            plugins: [
-                                {
-                                    resolve: slidesToShowPlugin,
-                                    options: {
-                                        numberOfSlides: 1,
-                                    },
-                                }
-                            ],
-                        },
-                        900: {
-                            plugins: [
-                                {
-                                    resolve: slidesToShowPlugin,
-                                    options: {
-                                        numberOfSlides: 2,
-                                    },
-                                }
-                            ],
-                        },
-                    }}
+                    // breakpoints={{
+                    //     640: {
+                    //         plugins: [
+                    //             {
+                    //                 resolve: slidesToShowPlugin,
+                    //                 options: {
+                    //                     numberOfSlides: 1,
+                    //                 },
+                    //             }
+                    //         ],
+                    //     },
+                    //     900: {
+                    //         plugins: [
+                    //             {
+                    //                 resolve: slidesToShowPlugin,
+                    //                 options: {
+                    //                     numberOfSlides: 2,
+                    //                 },
+                    //             }
+                    //         ],
+                    //     },
+                    // }}
                 />
                 <Dots
                     value={current}
                     onChange={setCurrent}
                     number={numberOfDots}/>
             </CarsContainer>
+            <Title>This carousel is not responsive, because some issues with library. Now I learn how to publish npm packages and fix it</Title>
         </TopCarsContainer>
     )
 }
